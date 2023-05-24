@@ -1,22 +1,28 @@
 [package]
 name = "a0kzg"
 version = "0.1.1"
-description = "ZKG polinomial commitments playground"
+description = "ZKG polynomial commitments playground"
 repository = "https://github.com/adria0/a0kzg"
 documentation = "https://docs.rs/a0kzg/"
 license = "MIT/Apache-2.0"
 authors = ["Adria Massanet <adriamassanet@gmail.com>"]
-edition = "2018"
+edition = "2021"
 keywords = ["cryptography", "bls12-381", "KZG"] 
 
 [dependencies]
-bls12_381 = "0.5"
+bls12_381 = { version = "0.7.1", git = "https://github.com/Daniel-Aaron-Bloom/bls12_381", branch = "more-optimizations" }
+ff = "0.12.1"
 num-bigint = "0.4"
-rand = "0.8"
+once_cell = "1.8"
+itertools = "0.10"
+
+[lib]
+bench = false
 
 [dev-dependencies]
-criterion = "0.3"
-once_cell= "1.8"
+criterion = "0.4"
+pprof = { version = "0.11", features = ["flamegraph"] }
+rand = "0.8"
 
 [[bench]]
 name = "benchmarks"

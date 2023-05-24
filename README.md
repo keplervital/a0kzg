@@ -17,9 +17,9 @@ use a0kzg::{Scalar, Kzg};
 // Create a trustd setup that allows maximum 4 points (degree+1)
 let kzg = Kzg::trusted_setup(5);
 
-// define the set of points (the "population"), and create a polinomial
-// for them, as well its polinomial commitment, see the polinomial commitment
-// like the "hash" of the polinomial
+// define the set of points (the "population"), and create a polynomial
+// for them, as well its polynomial commitment, see the polynomial commitment
+// like the "hash" of the polynomial
 let set = vec![
   (Scalar::from(1), Scalar::from(2)),
   (Scalar::from(2), Scalar::from(3)),
