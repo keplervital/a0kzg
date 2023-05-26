@@ -31,7 +31,9 @@ The following table estimates the size of the tree based on the number of elemen
 | 1000000  | 512    |      3 | 32683.938 ms |    378.29 days |     0.03      |  200 bytes |
 
 **Insert 1 formula:** `(commit_ms + prove_1_ms * width)`
+
 **KZG commitments:** Assuming `48-byte` (the commitments add up based on the depth of the tree)
+
 **Merkle tree proof size:** Assuming `32-byte` hashes a merkle tree would have a proof size of around `750 bytes` with 100000 elements due to it's bigger depth
 
 ## Verkle tree vs Merkle tree 
