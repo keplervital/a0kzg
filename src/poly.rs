@@ -188,10 +188,6 @@ impl<'a> Poly<'a> {
         }
     }
 
-    /// An optimized version of self / [s, 1]
-    fn div_by_x_plus_s(p: &VecDeque<Scalar>, s: &Scalar) -> VecDeque<Scalar> {
-        Self::div_by_x_plus_s_helper(p, s).collect()
-    }
     fn div_by_x_plus_s_helper<'p>(p: &'p VecDeque<Scalar>, s: &'p Scalar) -> impl Iterator<Item=Scalar> + 'p {
         let mut p = p.iter().rev().skip(1).rev();
         
